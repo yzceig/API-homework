@@ -1,2 +1,2 @@
 # API-homework
-第一次使用branch
+第一次使用GitHub
