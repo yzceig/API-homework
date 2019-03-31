@@ -8,19 +8,24 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+#这个是GUI界面架构程序，由qt designer生成的ui文件转化而来
+#
 class Ui_dilidili(object):
     def setupUi(self, dilidili):
         dilidili.setObjectName("dilidili")
         dilidili.resize(800, 600)
+        #这是button的配置
         self.btnClear = QtWidgets.QPushButton(dilidili)
         self.btnClear.setGeometry(QtCore.QRect(700, 520, 93, 28))
         self.btnClear.setObjectName("btnClear")
         self.btnQuery = QtWidgets.QPushButton(dilidili)
         self.btnQuery.setGeometry(QtCore.QRect(600, 520, 93, 28))
         self.btnQuery.setObjectName("btnQuery")
+        #这是groupBox的配置
         self.groupBox = QtWidgets.QGroupBox(dilidili)
         self.groupBox.setGeometry(QtCore.QRect(20, 20, 611, 431))
         self.groupBox.setObjectName("groupBox")
+        #这是下拉框的配置
         self.comboBox = QtWidgets.QComboBox(self.groupBox)
         self.comboBox.setGeometry(QtCore.QRect(90, 30, 87, 22))
         self.comboBox.setObjectName("comboBox")
@@ -38,12 +43,10 @@ class Ui_dilidili(object):
         self.resultText = QtWidgets.QTextEdit(self.groupBox)
         self.resultText.setGeometry(QtCore.QRect(5, 80, 606, 400))
         self.resultText.setObjectName("resultText")
-        self.label_2 = QtWidgets.QLabel(self.groupBox)
-        self.label_2.setGeometry(QtCore.QRect(20, 90, 181, 141))
-        self.label_2.setText("")
-        self.label_2.setObjectName("label_2")
+        
 
         self.retranslateUi(dilidili)
+        #这是表征信号的操作，设置槽
         self.btnQuery.clicked.connect(dilidili.queryAnime)
         self.btnClear.clicked.connect(dilidili.clearResult)
         QtCore.QMetaObject.connectSlotsByName(dilidili)
