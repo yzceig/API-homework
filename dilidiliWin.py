@@ -46,7 +46,7 @@ class Ui_dilidili(object):
         
 
         self.retranslateUi(dilidili)
-        #这是表征信号的操作，设置槽
+        #这是表征信号的操作，信号为clicked
         self.btnQuery.clicked.connect(dilidili.queryAnime)
         self.btnClear.clicked.connect(dilidili.clearResult)
         QtCore.QMetaObject.connectSlotsByName(dilidili)

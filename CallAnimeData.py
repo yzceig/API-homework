@@ -21,7 +21,7 @@ class MainWindow(QMainWindow ):
         self.ui = Ui_dilidili()
         self.ui.setupUi(self)
 
-#从网页上提取动画更新数据，点击“查询”按钮触发信号
+#从网页上提取动画更新数据，设置槽函数queryAnime()，点击“查询”按钮触发信号
     def queryAnime(self):
         
         dayName = self.ui.comboBox.currentText()
@@ -122,8 +122,11 @@ class MainWindow(QMainWindow ):
         #程序运行即触发图片写入
         painter.drawPixmap(self.rect(),pixmap) 
 
+
+        
+#设置槽函数clearResult(),点击“清空”按钮，触发信号清除文本框
     def clearResult(self):
-        #点击“清空”按钮，触发信号清除文本框
+        
         self.ui.resultText.clear()
 
 if __name__=="__main__":  
